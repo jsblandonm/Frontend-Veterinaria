@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* body{
+    font-family: 'Poppins', sans-serif;
+    background: #ee9ca7;
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  } */
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background: linear-gradient(to right,#fcffd5 ,#ffecf2);
+    user-select: none;
+    overflow-x: hidden;
+    /* color: var(--color-dark); */
+  }
+  h2 {
+    align-items: center;
+  }
+  
+  .container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+  }
+  
+main {
+  margin-top: 1.4rem;
+}
+
+   .recent-orders {
+    margin-top: 2rem;
+  }
+  
+   .recent-orders h2 {
+    margin-bottom: 0.8rem;
+  }
+  
+   .recent-orders table {
+    background: rgba(132, 139, 200, 0.18);
+    width: 100%;
+    border-radius: 20px;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem pink;
+    transition: all 300ms ease;
+  }
+  
+   .recent-orders table:hover {
+    box-shadow: none;
+  }
+  
+   table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid rgba(115, 128, 241, 0.18);
+    color: rgba(0, 0, 0, .85);
+  }
+  
+   table tbody tr:last-child td {
+    border: none;
+  }
+  
+   .recent-orders a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn {
+    background: rgba(115, 128, 241, 0.18);
+    color: rgba(254, 254, 254, 0.727);
+    padding: 1rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+  }
+  
+  .btn:hover{
+    background-color: rgba(78, 58, 58, 0.266);
+    cursor: pointer;
+  }
