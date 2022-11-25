@@ -2,7 +2,7 @@
      <div class="login-card-container">
     <div class="login-card">
       <div class="login-card-logo">
-        <a href="/index.html">
+        <a routerLink = '/home'>
           <img src="/assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
         </a>
       </div>
@@ -24,7 +24,7 @@
             <input type="checkbox" id="rememberMeCheckbox" checked />
             <label for="rememberMeCheckbox">Recuerdame</label>
           </div>
-          <a href="./RecuperarClave.html">Olvide mi contraseña!</a>
+          <a routerLink="/security/password-recovery">Olvide mi contraseña!</a>
         </div>
         <button [disabled] = "!fgValidator.valid" type="submit" name="action">
           IniciarSesion
@@ -32,7 +32,7 @@
       </form>
       <div class="login-card-footer">
         No tines una cuenta?
-        <a href="./CrearUser.html">Crea una cuenta gratis.</a>
+        <a routerLink="/administration/create-user">Crea una cuenta gratis.</a>
       </div>
     </div>
     <div class="login-card-social">

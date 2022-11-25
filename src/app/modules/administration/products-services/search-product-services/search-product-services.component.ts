@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModelProductsService } from 'src/app/model/datos.model';
+import { ProductsServiceService } from 'src/app/service/products-service.service';
 
 @Component({
   selector: 'app-search-product-services',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchProductServicesComponent implements OnInit {
 
-  constructor() { }
+  ListRegistersProducts : ModelProductsService[] = [];
+
+  constructor(private servicePorudctsService: ProductsServiceService) { }
 
   ngOnInit(): void {
+    this.GetListProdcutS();
+  }
+
+  GetListProdcutS(){
+    this.servicePorudctsService.GetRegisters().subscribe((datos : ModelProductsService[]) => {
+      this.ListRegistersProducts = datos;
+    })
   }
 
 }

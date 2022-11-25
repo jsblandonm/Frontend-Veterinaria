@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModelIdentify } from '../model/model.module';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { ModelPets } from '../model/datos.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SecurityService {
+
 
   url = 'http://localhost:3000';
   datesUserSesion = new BehaviorSubject<ModelIdentify>(new ModelIdentify());

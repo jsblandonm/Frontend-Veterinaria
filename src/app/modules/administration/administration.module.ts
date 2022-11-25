@@ -19,6 +19,14 @@ import { EditPetsComponent } from './pets/edit-pets/edit-pets.component';
 import { DeletePetsComponent } from './pets/delete-pets/delete-pets.component';
 import { SearchPetsComponent } from './pets/search-pets/search-pets.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateFormComponent } from './form/create-form/create-form.component';
+import { DeleteFormComponent } from './form/delete-form/delete-form.component';
+import { EditFormComponent } from './form/edit-form/edit-form.component';
+import { SearchFormComponent } from './form/search-form/search-form.component';
+import { CreateSucursalComponent } from './sucursal/create-sucursal/create-sucursal.component';
+import { EditSucursalComponent } from './sucursal/edit-sucursal/edit-sucursal.component';
+import { DeleteSucursalComponent } from './sucursal/delete-sucursal/delete-sucursal.component';
+import { SearchSucursalComponent } from './sucursal/search-sucursal/search-sucursal.component';
 
 
 @NgModule({
@@ -38,7 +46,15 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreatePetsComponent,
     EditPetsComponent,
     DeletePetsComponent,
-    SearchPetsComponent
+    SearchPetsComponent,
+    DeleteFormComponent,
+    EditFormComponent,
+    SearchFormComponent,
+    CreateFormComponent,
+    CreateSucursalComponent,
+    EditSucursalComponent,
+    DeleteSucursalComponent,
+    SearchSucursalComponent
   ],
   imports: [
     CommonModule,

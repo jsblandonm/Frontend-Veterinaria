@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Patrick+Hand&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fcffd5, #ffecf2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entradas input[type="text"],
+.entradas input[type="email"] {
+    border: none;
+    outline: none;
+    background: rgba(105, 78, 78, 0.18);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+    transition: background 0.5s;
+    margin-top: 10px;
+}
+
+.entradas input[type="file"]{
+    border:  none;
+}
+
+
+.entradas h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.entradas h1{
+    margin-bottom: 5.5rem;
+}
+.entradas h5{
+    margin-top: 15px;
+}
+select{
+    margin: 15px;
+    margin-bottom: 20px;
+}
+
+.entradas .form-item-icon {
+    position: absolute;
+    top: 0.82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: 0.4;
+}
+
+.form-select{
+    display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.3;
+  padding: .4em 1.4em .3em .8em;
+  width: 400px;
+  max-width: 100%; 
+  box-sizing: border-box;
+ margin: 20px auto;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+  border-radius: .3em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+}
+
+.btn {
+    background: rgba(196, 186, 127, 0.971);
+    color: rgba(254, 254, 254, 0.727);
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.5s;
+    margin-bottom: 2px;
+    border-color: rgba(196, 186, 127, 0.971);
+}
+
+.btn-1 {
+    background: rgba(196, 186, 127, 0.971);
+    color: rgba(254, 254, 254, 0.727);
+    padding: 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.5s;
+    margin-left: 5px;
+    border-color: rgba(196, 186, 127, 0.971);
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+}

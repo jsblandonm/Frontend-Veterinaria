@@ -1,0 +1,61 @@
+<body>
+  <div class="recent-orders">
+    <!-- <a routerLink="/administration/create-pets" class="btn" type="submit">
+            Nuevo Mascota</a> -->
+    <div style="text-align: center">
+      <h2>Lista de Formulario</h2>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>apellido</th>
+          <th>Identificacion</th>
+          <th>Correo/th></th>
+          <th>Telefono</th>
+          <th>Estado</th>
+          <th>Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of ListRegisterUser">
+          <td>
+            {{ a.nombre }}
+          </td>
+          <td>
+            {{ a.apellido }}
+          </td>
+          <td>
+            {{ a.identificacion }}
+          </td>
+          <td>
+            {{ a.correo }}
+          </td>
+          <td>
+            {{ a.telefono }}
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr *ngFor="let p of listRegisterForms">
+          <td>
+            {{ p.estado }}
+          </td>
+          <td>
+            <img src="{{ p.foto }}" class="imagenes" />
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- <td>
+                        <a routerLink="/administration/edit-pets/{{ p.id }}" class="btn">Editar
+                            Mascota</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administration/delete-pets/{{ p.id }}" class="btn">Borrar
+                            Mascota</a>
+                    </td> -->
+    </table>
+    <a href="#">show all</a>
+  </div>
+</body>

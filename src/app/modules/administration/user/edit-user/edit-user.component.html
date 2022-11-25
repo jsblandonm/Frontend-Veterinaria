@@ -30,7 +30,7 @@
           </div>
           <div class="form-item">
             <span class="form-item-icon material-symbols-rounded">mail</span>
-            <input formControlName="correo" type="text" placeholder="Enter Email" id="emailForm" required autofocus />
+            <input formControlName="correo" type="text" placeholder="Enter Email" id="emailForm" required />
           </div>
           <!-- <div class="form-item">
             <span class="form-item-icon material-symbols-rounded">lock</span>
@@ -47,7 +47,7 @@
               </div>
               <a href="#">I forgot my password!</a>
             </div> -->
-          <button [disabled]="!fgValidator.valid" type="submit">Editar cuenta</button>
+          <button [disabled]="!fgValidator.valid" type="submit">Editar usuario</button>
         </form>
         <!-- <div class="login-card-footer">
             Don't have an account? <a href="#">Create a free account.</a>

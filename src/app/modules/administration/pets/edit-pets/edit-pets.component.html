@@ -1,1 +1,52 @@
-<p>edit-pets works!</p>
+<body>
+    <div class="login-card-container">
+      <div class="login-card">
+        <div class="login-card-logo">
+          <a routerLink="/administration/listPets">
+            <img src="./assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
+          </a>
+        </div>
+        <div class="login-card-header">
+          <h1>Editar Mascota</h1>
+          <div>Porfavor Eddite Su Mascota</div>
+        </div>
+        <form [formGroup]="fgValidator" (ngSubmit)="EditPet()" class="login-card-form needs-validation" novalidate>
+          <input type="hidden" formControlName="id">
+          <div class="form-item">
+            <span for="NombreForm" class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="nombre" type="text" placeholder="Nombre" id="NombreForm" required autofocus />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="foto" type="text" placeholder="foto" id="FotoForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">badge</span>
+            <input formControlName="caracteristicas" type="text" placeholder="Caracteristicas" id="CaracteristicasForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">phone_iphone</span>
+            <input formControlName="estado" type="text" placeholder="estado" id="EstadoForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">mail</span>
+            <input formControlName="edad" type="text" placeholder="Edad" id="EdadForm" required autofocus />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input formControlName="especie" type="text" placeholder="especie" id="EspecieForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input formControlName="Raza" type="text" placeholder="Raza" id="RazaForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input formControlName="comentario" type="text" placeholder="comentario" id="ComentarioForm" required />
+          </div>
+          <button [disabled]="!fgValidator.valid" type="submit">Editar Mascota</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  

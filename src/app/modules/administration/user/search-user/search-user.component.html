@@ -1,8 +1,9 @@
 <body>
-
             <div class="recent-orders">
                 <a routerLink="/administration/create-user" class="btn" type="submit">
                     Nuevo Usuario</a>
+                    <a routerLink="/administration/create-pets" class="btn" type="submit">
+                        Nuevo Mascota</a>
                 <div  style="text-align: center">
                     <h2>Lista de Usuarios</h2>
                 </div>
@@ -52,78 +53,3 @@
                 <a href="#">show all</a>
             </div>
 </body>
-  
-
-
-    <!-- <a routerLink="/administration/create-user" class="btn btn-success" type="submit">
-        Nuevo Usuario</a>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="container" style="text-align: center">
-        <h1>Lista de Usuarios</h1>
-
-        <br />
-        <br />
-
-        <div class="container-fluid" style="text-align: center">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Usuarios" aria-label="Search" />
-
-                &nbsp;
-
-                <input class="form-control me-2" type="search" placeholder="Estado" aria-label="Search" />
-
-                &nbsp;
-
-                <button class="btn btn-success" type="submit">Editar</button>
-            </form>
-        </div>
-
-        <br />
-        <br />
-
-        <table class="table" class="table-danger">
-            <thead>
-                <tr>
-                    <th class="table-danger">Nombre</th>
-                    <th class="table-danger">Apellido</th>
-                    <th class="table-danger">Identificacion</th>
-                    <th class="table-danger">Correo</th>
-                    <th class="table-danger">Telefono</th>
-                    <th class="table-danger">rol</th>
-                    <th class="table-danger">Editar</th>
-                </tr>
-            </thead>
-
-            <tbody class="table-group-divider">
-                <tr *ngFor="let p of ListRegisters">
-                    <th>
-                        {{ p.nombre }}
-                    </th>
-                    <th>
-                        {{ p.apellido }}
-                    </th>
-                    <th>
-                        {{ p.identificacion }}
-                    </th>
-                    <th>
-                        {{ p.correo }}
-                    </th>
-                    <th>
-                        {{ p.telefono }}
-                    </th>
-                    <th>
-                        {{ p.rol }}
-                    </th>
-                    <th>
-                        <a routerLink="/administration/edit-user/{{ p.id }}" class="btn btn-success">Editar usuario</a>
-                    </th>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->

@@ -1,1 +1,60 @@
-<p>search-pets works!</p>
+<body>
+    <div class="recent-orders">
+        <!-- <a routerLink="/administration/create-pets" class="btn" type="submit">
+            Nuevo Mascota</a> -->
+        <div  style="text-align: center">
+            <h2>Lista de Mascotas</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Foto</th>
+                    <th>Caracteristicas</th>
+                    <th>Estado</th>
+                    <th>Edad</th>
+                    <th>Especie</th>
+                    <th>Raza</th>
+                    <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of ListRegistersPets">
+                    <td>
+                        {{ p.nombre }}
+                    </td>
+                    <td>
+                        <img src="{{ p.foto }}" class="imagenes">
+                    </td>
+                    <td>
+                        {{ p.caracteristicas }}
+                    </td>
+                    <td>
+                        {{ p.estado }}
+                    </td>
+                    <td>
+                        {{ p.edad }}
+                    </td>
+                    <td>
+                        {{ p.especie }}
+                    </td>
+                    <td>
+                        {{p.Raza}}
+                    </td>
+                    <td>
+                        {{p.comentario}}
+                    </td>
+                    <td>
+                        <a routerLink="/administration/edit-pets/{{ p.id }}" class="btn">Editar
+                            Mascota</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administration/delete-pets/{{ p.id }}" class="btn">Borrar
+                            Mascota</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#">show all</a>
+    </div>
+</body>

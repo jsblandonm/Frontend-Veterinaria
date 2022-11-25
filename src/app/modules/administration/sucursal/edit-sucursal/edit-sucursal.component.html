@@ -1,0 +1,50 @@
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <a routerLink="/administration/listSucursal">
+                    <img src="./assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
+                </a>
+            </div>
+            <div class="login-card-header">
+                <h1>Crear Sucursal</h1>
+                <div>Porfavor cree la Sucursal</div>
+            </div>
+            <form [formGroup]="fgValidator" (ngSubmit)="EditSucursal()" class="login-card-form needs-validation"
+                novalidate>
+                <div class="form-item">
+                    <span for="departamentoForm" class="form-item-icon material-symbols-rounded">Location_City</span>
+                    <input formControlName="departamento" type="text" placeholder="departamento" id="departamentoForm"
+                        required autofocus />
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">Location_City</span>
+                    <input formControlName="ciudad" type="text" placeholder="ciudad" id="ciudadForm" required />
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">Pin_Drop</span>
+                    <input formControlName="direccion" type="text" placeholder="direccion" id="direccionForm"
+                        required />
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">phone</span>
+                    <input formControlName="telefono" type="number" placeholder="Enter Email" id="emailForm" required
+                        autofocus />
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">list</span>
+                    <input formControlName="numeroempleados" type="number" placeholder="numeroempleados"
+                        id="numeroempleadosForm" required />
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">list </span>
+                    <input formControlName="numerosede" type="number" placeholder="numerosede" id="numerosedeForm"
+                        required />
+                </div>
+                <button [disabled]="!fgValidator.valid" type="submit">
+                    Crear Sucursal
+                </button>
+            </form>
+        </div>
+    </div>
+</body>

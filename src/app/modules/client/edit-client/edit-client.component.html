@@ -1,1 +1,58 @@
-<p>edit-client works!</p>
+<body>
+    <div class="login-card-container">
+      <div class="login-card">
+        <div class="login-card-logo">
+          <a routerLink="/administration/listUser">
+            <img src="./assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
+          </a>
+        </div>
+        <div class="login-card-header">
+          <h1>Editar Usuario</h1>
+          <div>Porfavor Edite el usuario</div>
+        </div>
+        <form [formGroup]="fgValidator" (ngSubmit)="EditUser()" class="login-card-form needs-validation" novalidate>
+            <input type="hidden" formControlName="id">
+          <div class="form-item">
+            <span for="NombreForm" class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="nombre" type="text" placeholder="Nombre" id="NombreForm" required autofocus />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="apellido" type="text" placeholder="Apellido" id="ApellidoForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">badge</span>
+            <input formControlName="identificacion" type="text" placeholder="Identificacion" id="IdentificacionForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">phone_iphone</span>
+            <input formControlName="telefono" type="text" placeholder="Telefono" id="TelefonoForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">mail</span>
+            <input formControlName="correo" type="text" placeholder="Enter Email" id="emailForm" required />
+          </div>
+          <!-- <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input formControlName="contrasena" type="password" placeholder="Create Pasword" id="passwordForm" required />
+          </div> -->
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">lock</span>
+            <input formControlName="rol" type="text" placeholder="Rol" id="RolForm" required />
+          </div>
+          <!-- <div class="form-item-other">
+              <div class="checkbox">
+                <input type="checkbox" id="rememberMeCheckbox" checked />
+                <label for="rememberMeCheckbox">Remember me</label>
+              </div>
+              <a href="#">I forgot my password!</a>
+            </div> -->
+          <button [disabled]="!fgValidator.valid" type="submit">Editar cuenta</button>
+        </form>
+        <!-- <div class="login-card-footer">
+            Don't have an account? <a href="#">Create a free account.</a>
+          </div> -->
+      </div>
+    </div>
+  </body>
+  

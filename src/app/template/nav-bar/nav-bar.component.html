@@ -1,4 +1,3 @@
-
 <body>
   <header>
     <div class="content">
@@ -8,81 +7,36 @@
       <nav>
         <ul>
           <li *ngIf="LogginOn">
-          <a routerLink="/administration/listUser">usuarios</a>
-        </li>
-        <li *ngIf="LogginOn">
-          <a routerLink="administration/products-services">Productos</a>
-        </li>
-        <li *ngIf="LogginOn">
-          <a routerLink="/security/change-password">cambiar clave</a>
-        </li>
-        <li *ngIf="!LogginOn">
-          <a routerLink="/security/log-in">iniciar sesion</a>
-        </li>
-        <li *ngIf="LogginOn">
-          <a routerLink="/security/log-out">Cerrar sesion</a>
-        </li>
+            <a routerLink="/administration/listUser">usuarios</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="/administration/listPets">mascotas</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="/administration/listPlan">Plan</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="administration/listProductS">Productos</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="/administration/listSucursal">Sucursal</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="/security/change-password">cambiar clave</a>
+          </li>
+          <li *ngIf="!LogginOn">
+            <a routerLink="/security/log-in">iniciar sesion</a>
+          </li>
+          <li *ngIf="LogginOn">
+            <a routerLink="/security/log-out">Cerrar sesion</a>
+          </li>
         </ul>
-        
-        <!-- <a *ngIf="LogginOn" routerLink="home">Nosotros</a>
-        <a *ngIf="LogginOn" routerLink="home">Servcios</a>
-        <a *ngIf="LogginOn" routerLink="home">Galeria</a>
-        <a *ngIf="LogginOn" routerLink="home">Contacto</a>
-        <a *ngIf="!LogginOn" routerLink="security/Log-in">Login</a>
-        <a *ngIf="LogginOn" routerLink="security/Log-out">Logout</a> -->
-</nav>
+      </nav>
       <div class="clearfix"></div>
     </div>
   </header>
 </body>
 
-<!-- 
-<nav>
-  <div class="nav-wrapper">
-    <a routerLink="/inicio" class="brand-logo">logo</a>
-    <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li *ngIf="LogginOn"><a routerLink="adminstration/user">usuarios</a></li>
-      <li *ngIf="LogginOn"><a routerLink="adminstration/products-services">p y s</a></li>
-      <li *ngIf="LogginOn"><a routerLink="security/change-password">cambiar clave</a></li>
-      <li *ngIf="!LogginOn"><a routerLink="security/Log-in">iniciar sesion</a></li>
-      <li *ngIf="LogginOn"><a routerLink="security/Log-out">Cerrar sesion</a></li>
-    </ul>
-  </div>
-</nav>
 
-<ul class="sidenav" id="mobile-demo">
-  <li *ngIf="LogginOn"><a routerLink="administration/user">usuarios</a></li>
-  <li *ngIf="LogginOn"><a routerLink="administration/products-services">p y s</a></li>
-  <li *ngIf="LogginOn"><a routerLink="security/change-password">cambiar clave</a></li>
-  <li *ngIf="!LogginOn"><a routerLink="security/Log-in">iniciar sesion</a></li>
-  <li *ngIf="LogginOn"><a routerLink="security/Log-out">Cerrar sesion</a></li>
-</ul> -->
 
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mascota Feliz</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/administration/create-user">usuarios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="administration/products-services">Producstos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">contactanos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/security/log-in">Inciar Sesion</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav> -->
+  

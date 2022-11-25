@@ -1,1 +1,49 @@
-<p>search-plan works!</p>
+<body>
+    <div class="recent-orders">
+        <a routerLink="/administration/create-plans" class="btn" type="submit">
+            Nuevo Plan</a>
+        <div  style="text-align: center">
+            <h2>Lista de Planes</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipodeplan</th>
+                    <th>Fecha de  Creacion</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of ListRegistersPlans">
+                    <td>
+                        {{ p.Tipodeplan }}
+                    </td>
+                    <td>
+                        {{ p.fechaCreacion }}
+                    </td>
+                    <td>
+                        {{ p.nombre }}
+                    </td>
+                    <td>
+                        {{ p.descripcion }}
+                    </td>
+                    <td>
+                        {{ p.precio }}
+                    </td>
+                    <td>
+                        <a routerLink="/administration/edit-plans/{{ p.id }}" class="btn">Editar
+                            plan</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administration/delete-user/{{ p.id }}" class="btn">Borrar
+                            Plan</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#">show all</a>
+    </div>
+</body>
+

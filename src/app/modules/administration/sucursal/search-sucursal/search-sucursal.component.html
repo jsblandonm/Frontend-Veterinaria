@@ -1,0 +1,52 @@
+<body>
+    <div class="recent-orders">
+        <a routerLink="/administration/create-sucursal" class="btn" type="submit">
+            Nueva Sucursal</a>
+        <div style="text-align: center">
+            <h2>Sucursales</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Departamento</th>
+                    <th>Ciudad</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Empleados</th>
+                    <th>Numero de la Sedes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of ListRegistersSucursal">
+                    <td>
+                        {{ p.departamento }}
+                    </td>
+                    <td>
+                        {{ p.ciudad }}
+                    </td>
+                    <td>
+                        {{ p.direccion }}
+                    </td>
+                    <td>
+                        {{ p.telefono }}
+                    </td>
+                    <td>
+                        {{ p.numeroempleados }}
+                    </td>
+                    <td>
+                        {{ p.numerosede }}
+                    </td>
+                    <td>
+                        <a routerLink="/administration/edit-sucursal/{{ p.id }}" class="btn">Editar
+                            Sucursal</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administration/delete-sucursal/{{ p.id }}" class="btn">Borrar
+                            Sucursal</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#">show all</a>
+    </div>
+</body>

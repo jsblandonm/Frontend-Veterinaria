@@ -1,1 +1,35 @@
-<p>create-product-services works!</p>
+<body>
+    <div class="login-card-container">
+      <div class="login-card">
+        <div class="login-card-logo">
+          <a routerLink="/administration/listProductS">
+            <img src="./assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
+          </a>
+        </div>
+        <div class="login-card-header">
+          <h1>Crear Producto</h1>
+          <div>Porfavor cree el Producto</div>
+        </div>
+        <form [formGroup]="fgValidator" (ngSubmit)="SaveProdcutService()" class="login-card-form needs-validation" novalidate>
+          <div class="form-item">
+            <span for="tipoForm" class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="tipo" type="text" placeholder="tipo" id="tipoForm" required autofocus />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="nombre" type="text" placeholder="nombre" id="nombreForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="descripcion" type="text" placeholder="descripcion" id="descripcionForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">payments</span>
+            <input formControlName="precio" type="number" placeholder="Enter Email" id="emailForm" required autofocus />
+          </div>
+          <button [disabled]="!fgValidator.valid" type="submit">Create Producto</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  

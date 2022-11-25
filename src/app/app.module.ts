@@ -8,6 +8,9 @@ import { FooterComponent } from './template/footer/footer.component';
 import { ErrorComponent } from './template/error/error.component';
 import { HomeComponent } from './template/home/home.component';
 import { HttpClientModule } from "@angular/common/http";
+import { SideBarComponent } from './template/side-bar/side-bar.component';
+
+
 
 // importar componentes
 
@@ -19,6 +22,7 @@ import { HttpClientModule } from "@angular/common/http";
     FooterComponent,
     ErrorComponent,
     HomeComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

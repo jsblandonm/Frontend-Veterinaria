@@ -1,1 +1,44 @@
-<p>search-product-services works!</p>
+<body>
+    <div class="recent-orders">
+        <a routerLink="/administration/create-product-services" class="btn" type="submit">
+            Nuevo producto</a>
+        <div  style="text-align: center">
+            <h2>Lista de Prodcutos</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of ListRegistersProducts">
+                    <td>
+                        {{ p.tipo }}
+                    </td>
+                    <td>
+                        {{ p.nombre }}
+                    </td>
+                    <td>
+                        {{ p.descripcion }}
+                    </td>
+                    <td>
+                        {{ p.precio }}
+                    </td>
+                    <td>
+                        <a routerLink="/administration/edit-product-services/{{ p.id }}" class="btn">Editar
+                            Producto</a>
+                    </td>
+                    <td>
+                        <a routerLink="/administration/delete-product-services/{{ p.id }}" class="btn">Borrar
+                            Producto</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#">show all</a>
+    </div>
+</body>

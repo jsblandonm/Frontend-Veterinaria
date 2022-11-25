@@ -1,1 +1,39 @@
-<p>edit-plan works!</p>
+<body>
+    <div class="login-card-container">
+      <div class="login-card">
+        <div class="login-card-logo">
+          <a routerLink="/administration/listPlan">
+            <img src="./assets/logs/pets-svgrepo-com.svg" alt="logo empresa" />
+          </a>
+        </div>
+        <div class="login-card-header">
+          <h1>Crear Plan</h1>
+          <div>Porfavor Edite el Plan</div>
+        </div>
+        <form [formGroup]="fgValidator" (ngSubmit)="EditPlans()" class="login-card-form needs-validation" novalidate>
+          <div class="form-item">
+            <span for="TipodeplanForm" class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="Tipodeplan" type="text" placeholder="Tipodeplan" id="TipodeplanForm" required autofocus />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">calendar_month</span>
+            <input formControlName="fechaCreacion" type="date" placeholder="fechaCreacion" id="fechaCreacionForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="nombre" type="text" placeholder="nombre" id="nombreForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">insert_text</span>
+            <input formControlName="descripcion" type="text" placeholder="descripcion" id="descripcionForm" required />
+          </div>
+          <div class="form-item">
+            <span class="form-item-icon material-symbols-rounded">payments</span>
+            <input formControlName="precio" type="text" placeholder="precio" id="precioForm" required  />
+          </div>
+          <button [disabled]="!fgValidator.valid" type="submit">Editar Plan</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  

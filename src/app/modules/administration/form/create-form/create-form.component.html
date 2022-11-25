@@ -1,0 +1,51 @@
+<body>
+        <div>
+            <form [formGroup]="fgValidator" (ngSubmit)="[SaveFormUser(),SaveFormPets()]" novalidate class="entradas">
+    <h1>FORMATO DE SOLICITUD</h1>
+            <h2>Datos del solicitante</h2>
+
+                <div>
+                    <input formControlName="nombre" type="text"  placeholder="Nombre del solicitante:" class="form-control" id="txtNombre" />
+                </div>
+                <div>
+                    <input formControlName="apellido" type="text" placeholder="Apellido del solicitante" class="form-control" id="txtIdentificacion" />
+                </div>
+                <div>
+                    <input formControlName="identificacion" type="text" placeholder="Identificacion del solicitante:" class="form-control" id="txtDireccion" />
+                </div>
+                <div>
+                    <span class="form-item-icon material-symbols-rounded">mail</span>
+                    <input formControlName="correo" type="email" placeholder="Correo electronico" class="form-control" id="txtNumerodeContacto" />
+                </div>
+                <div>
+                    <input formControlName="telefono" type="text" placeholder="Telefono del solicitante:" class="form-control" id="txtCorreo" />
+                </div>
+                <!-- <div class="col-md-4">
+    <label for="txtOcupacion" class="form-label">Sucursal del solicitante:</label>
+    <input type="text" class="form-control" id="txtOcupacion">
+  </div> -->
+                <div>
+                    <input formControlName="estado" type="text" placeholder="Estado de la Solicutud" class="form-control" />
+                </div>
+                <div>
+                    <input formControlName="foto" type="file" placeholder="foto de la mascota:" />
+                </div>
+
+                <h5>Plan solicitado:</h5>
+                <div>
+                    <div class="form-floating">
+                        <select class="form-select">
+                            <option selected>Seleccione un plan</option>
+                            <option value="1">Básico</option>
+                            <option value="2">Óptimo</option>
+                            <option value="3">Protección</option>
+                            <option value="4">Premium</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button [disabled]="!fgValidator.valid" class="btn" type="button1">Aceptar</button>
+                <button [disabled]="!fgValidator.valid" class="btn-1" type="button2">Rechazar</button>
+            </form>
+        </div>
+</body>
