@@ -1,35 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
+  min-height: 0;
   background: linear-gradient(to right, #fcffd5, #ffecf2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
 }
-
 .content {
   width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
 }
-
 .clearfix {
   clear: both;
   float: none;
 }
-
-.half,
-.card {
+.card,
+.half {
   width: 50%;
   float: left;
   text-align: center;
 }
-
 .card {
   width: 300px;
   background: rgba(225, 225, 225, 0.958);
@@ -37,33 +30,27 @@ body {
   border-radius: 10px;
   position: relative;
 }
-
 .card::before {
-  content: "";
   position: absolute;
   inset: 0;
   background: rgba(105, 78, 78, 0.15);
   transform: rotate(-6deg);
   z-index: -1;
 }
-
 .contact-card-header h5 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   opacity: 0.8;
 }
-
 .contac-card-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .contac-card-form .form-item {
   position: relative;
 }
-
 .contac-card-form .form-item .form-item-icon {
   position: absolute;
   top: 0.82rem;
@@ -71,12 +58,18 @@ body {
   font-size: 1.3rem;
   opacity: 0.4;
 }
-
-.card input[type="text"],
+.contac-card-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: calc(1rem * 0.8);
+  margin-bottom: 0.3rem;
+}
 .card input[type="email"],
+.card input[type="text"],
 .card textarea[type="text"] {
   border: none;
-  outline: none;
+  outline: 0;
   background: rgba(105, 78, 78, 0.18);
   padding: 1rem 0.1rem;
   padding-left: calc(1rem * 3.5);
@@ -84,13 +77,11 @@ body {
   width: 100%;
   transition: background 0.5s;
 }
-
 .card input:focus {
   background: rgba(255, 255, 255, 0.784);
 }
-
 .contac-card-form button {
-  background: black;
+  background: #000;
   color: rgba(254, 254, 254, 0.727);
   padding: 4.1px;
   border-radius: 100px;
@@ -98,46 +89,37 @@ body {
   letter-spacing: 2px;
   transition: background 0.5s;
 }
-
 .contac-card-form button:hover {
   background-color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
 }
-
 .half img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
 .half h1 {
   margin-top: 100px;
   line-height: 50px;
 }
-
 .descriptionMF {
   width: 100%;
   background: #eee;
   padding: 70px 0;
   text-align: center;
 }
-
 .descriptionMF h1 {
   line-height: 70px;
 }
-
 .descriptionMF h3 {
   line-height: 40px;
 }
-
 .slider {
   width: 100%;
 }
-
 .slider input {
   display: none;
 }
-
 .Plan {
   display: flex;
   align-items: center;
@@ -147,7 +129,6 @@ body {
   perspective: 1000px;
   overflow: hidden;
 }
-
 .Plan .item {
   width: 450px;
   padding: 0;
@@ -162,7 +143,6 @@ body {
   user-select: none;
   cursor: pointer;
 }
-
 .Plan .item img {
   width: 150px;
   height: 150px;
@@ -170,22 +150,20 @@ body {
   border-radius: 50%;
   border: 10px solid #0000000b;
 }
-
-.Plan .item p,
+.Plan .item p {
+  color: #000;
+}
 .Plan .item h5 {
   font-size: 15px;
 }
-
 .Plan .item h2 {
   font-size: 15px;
 }
-
 .dots {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .dots label {
   height: 5px;
   width: 5px;
@@ -195,27 +173,24 @@ body {
   margin: 7px;
   transition-duration: 0.2s;
 }
-
-#p-1:checked ~ .Plan label[for="p-1"],
-#p-2:checked ~ .Plan label[for="p-2"],
-#p-3:checked ~ .Plan label[for="p-3"],
-#p-4:checked ~ .Plan label[for="p-4"],
-#p-5:checked ~ .Plan label[for="p-5"] {
+#p-1:checked .dots label[for="p-1"],
+#p-2:checked .dots label[for="p-2"],
+#p-3:checked .dots label[for="p-3"],
+#p-4:checked .dots label[for="p-4"],
+#p-5:checked .dots label[for="p-5"] {
   transform: scale(2);
   background-color: rgba(153, 209, 244, 0.5);
 }
-
-#p-1:checked ~ .Plan label[for="p-2"],
-#p-2:checked ~ .Plan label[for="p-1"],
-#p-2:checked ~ .Plan label[for="p-3"],
-#p-3:checked ~ .Plan label[for="p-2"],
-#p-3:checked ~ .Plan label[for="p-4"],
-#p-4:checked ~ .Plan label[for="p-3"],
-#p-4:checked ~ .Plan label[for="p-5"],
-#p-4:checked ~ .Plan label[for="p-4"] {
+#p-1:checked .dots label[for="p-2"],
+#p-2:checked .dots label[for="p-1"],
+#p-2:checked .dots label[for="p-3"],
+#p-3:checked .dots label[for="p-2"],
+#p-3:checked .dots label[for="p-4"],
+#p-4:checked .dots label[for="p-3"],
+#p-4:checked .dots label[for="p-4"],
+#p-4:checked .dots label[for="p-5"] {
   transform: scale(1.5);
 }
-
 #p-1:checked ~ .Plan label[for="p-3"],
 #p-2:checked ~ .Plan label[for="p-4"],
 #p-3:checked ~ .Plan label[for="p-5"],
@@ -224,7 +199,6 @@ body {
   transform: translate3d(600px, 0, -180px) rotateY(-25deg);
   z-index: 2;
 }
-
 #p-1:checked ~ .Plan label[for="p-2"],
 #p-2:checked ~ .Plan label[for="p-3"],
 #p-3:checked ~ .Plan label[for="p-4"],
@@ -233,34 +207,31 @@ body {
   transform: translate3d(300px, 0, -90px) rotateY(-15deg);
   z-index: 3;
 }
-
+#p-1:checked ~ .Plan label[for="p-5"],
 #p-2:checked ~ .Plan label[for="p-1"],
 #p-3:checked ~ .Plan label[for="p-2"],
 #p-4:checked ~ .Plan label[for="p-3"],
-#p-5:checked ~ .Plan label[for="p-4"],
-#p-1:checked ~ .Plan label[for="p-5"] {
+#p-5:checked ~ .Plan label[for="p-4"] {
   transform: translate3d(-300px, 0, -90px) rotateY(15deg);
   z-index: 3;
 }
-
+#p-1:checked ~ .Plan label[for="p-5"],
+#p-2:checked ~ .Plan label[for="p-4"],
 #p-3:checked ~ .Plan label[for="p-1"],
 #p-4:checked ~ .Plan label[for="p-2"],
-#p-5:checked ~ .Plan label[for="p-3"],
-#p-2:checked ~ .Plan label[for="p-4"],
-#p-1:checked ~ .Plan label[for="p-5"] {
+#p-5:checked ~ .Plan label[for="p-3"] {
   transform: translate3d(-600px, 0, -180px) rotateY(25deg);
 }
-
 #p-1:checked ~ .Plan label[for="p-1"],
 #p-2:checked ~ .Plan label[for="p-2"],
 #p-3:checked ~ .Plan label[for="p-3"],
 #p-4:checked ~ .Plan label[for="p-4"],
+#p-5:checked ~ .Plan label[for="p-4"],
 #p-5:checked ~ .Plan label[for="p-5"] {
   z-index: 5;
 }
-
 .slider button {
-  background: black;
+  background: #000;
   color: rgba(254, 254, 254, 0.727);
   padding: 3px;
   border-radius: 100px;
@@ -268,18 +239,15 @@ body {
   letter-spacing: 2px;
   transition: background 0.5s;
 }
-
 .slider button:hover {
   background-color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
 }
-
 .servcios {
   width: 980px;
   list-style: none;
   margin: 0 auto;
 }
-
 .servcios li {
   float: left;
   width: 180px;
@@ -290,12 +258,10 @@ body {
   margin: 20px;
   border-radius: 10px;
 }
-
 .servcios li a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #f5f5f5;
 }
-
 .servcios li img {
   width: 150px;
   height: auto;
