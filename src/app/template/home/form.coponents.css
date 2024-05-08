@@ -1,0 +1,25 @@
+.half img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px
+}
+
+.half h1 {
+    margin-top: 100px;
+    line-height: 50px
+}
+
+.descriptionMF {
+    width: 100%;
+    background: #eee;
+    padding: 70px 0;
+    text-align: center
+}
+
+.descriptionMF h1 {
+    line-height: 70px
+}
+
+.descriptionMF h3 {
+    line-height: 40px
+}
