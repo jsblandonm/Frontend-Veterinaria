@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Frontend_Veterinaria-angular:build:production"
+              "buildTarget": "Frontend_Veterinaria-angular:build:production"
             },
             "development": {
-              "browserTarget": "Frontend_Veterinaria-angular:build:development"
+              "buildTarget": "Frontend_Veterinaria-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Frontend_Veterinaria-angular:build"
+            "buildTarget": "Frontend_Veterinaria-angular:build"
           }
         },
         "test": {
